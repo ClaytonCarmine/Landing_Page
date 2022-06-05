@@ -1,9 +1,197 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-.Home{
+header{
     width: 100%;
-    color: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+
 }
+.block-1{ /*Header o encabezado*/
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    padding: 40px;
+}
+
+.block-2-Container{
+    width: 100%;
+    height: 90px;
+    background: #0600C5;
+    padding: 0px 25px;
+}
+
+.block-3-menu{
+    max-width: 1000px;
+    margin: auto;
+    height: 75%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+
+}
+
+
+nav > ul > li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding: 45px;
+    text-transform: lowercase;
+    font-size: 16px;
+    transition: all 500ms ease;
+}
+
+nav > ul > li a:hover{
+    transform: translate3d(20px,0px);
+    background: #0074c7;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+nav ul li ul{
+    width: 400px;
+    display:flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+
+}
+
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+nav ul li ul li a{
+    display: block;
+    color: #1d323d;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: #0074c7;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*Landing Page*/
+
+main{
+    max-width: 1200px;
+    height: calc(100vh + 800px);
+    padding: 1px;
+    margin: auto;
+}
+
+.cover{
+    display: flex;
+    justify-content: center;
+    margin-top: 210px;
+}
+
+.text__information-cover{
+    width: 50%;
+}
+
+.text__information-cover h1{
+    font-size: 50px;
+}
+
+.text__information-cover p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+/*BOTONES*/
+
+.buttons__cover{
+    display: flex;
+    margin-top: 40px;
+}
+
+.btn__readMore-cover{
+    padding: 14px 40px;
+    border: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 300ms;
+
+}
+
+.btn__register-cover{
+    padding: 14px 50px;
+    border: none;
+    background: rgb(131, 116, 116);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background, color, 300ms;
+}
+
+.btn__register-cover:hover{
+    background: #0074c7;
+    color: #f0f0f0;
+}
+
+.btn__readMore-cover:hover{
+    background: #2d13c0;
+    color: white;
+
+}
+
+
+/*End Landing Page*/
